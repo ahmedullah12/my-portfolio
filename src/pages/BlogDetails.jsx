@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axiosInstance from "../axios/axiosInstance";
 import parse from "html-react-parser";
+import Loader from "../components/Loader/Loader";
 
 const Container = styled.div`
   width: 100%;
@@ -69,7 +70,7 @@ const BlogDetails = () => {
     },
   });
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loader/>;
   return (
     <Container>
       {blogData && (

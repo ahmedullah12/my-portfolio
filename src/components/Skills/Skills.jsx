@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import axiosInstance from "../../axios/axiosInstance";
 import { useQuery } from "@tanstack/react-query";
 import transformSkillsData from "../../utils/transformSkillData";
+import Loader from "../Loader/Loader";
 
 const Container = styled.div`
   display: flex;
@@ -144,13 +145,12 @@ const Skills = () => {
   });
 
   const formattedSkillsData = transformSkillsData(skillsData);
-  console.log(formattedSkillsData);
 
   useEffect(() => {
     AOS.init({ duration: "1000", delay: "500" });
   }, []);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loader/>;
 
   return (
     <Container data-aos="fade-up" data-aos-once="true" id="skills">

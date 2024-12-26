@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import axiosInstance from "../../axios/axiosInstance";
 import BlogCard from "../Cards/BlogCard";
+import Loader from "../Loader/Loader";
 
 const Container = styled.div`
   background: linear-gradient(
@@ -80,9 +81,9 @@ const Blogs = () => {
     AOS.init({ duration: "1000", delay: "500" });
   }, []);
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loader/>;
   return (
-    <Container data-aos="fade-up" data-aos-once="true" id="projects">
+    <Container data-aos="fade-up" data-aos-once="true" id="blogs">
       <Wrapper>
         <Title>Blogs</Title>
         <CardContainer>

@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import axiosInstance from "../axios/axiosInstance";
 import { format } from "date-fns";
 import parse from "html-react-parser";
+import Loader from "../components/Loader/Loader";
 
 const Container = styled.div`
   width: 100%;
@@ -138,9 +139,7 @@ const ProjectDetails = () => {
     },
   });
 
-  console.log(projectData);
-
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Loader/>;
   return (
     <Container>
       {

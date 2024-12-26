@@ -1,8 +1,5 @@
 import clglogo from '../assets/clglogo.jpg';
 import schllogo from '../assets/schllogo.jpg';
-import ahmedsphotography from '../assets/ahmeds-photography.png';
-import gadgetTradeHub from '../assets/gadget-trade-hub.png';
-import taskManager from '../assets/task-manager.png';
 
 
 export const Bio = {
@@ -40,48 +37,6 @@ export const Bio = {
       grade: "5.00 GPA",
       desc: "I completed my 10th-grade education in Science at Sherpur Govt. Victoria Academy in Sherpur. ",
       degree: "Science Technology",
-    },
-    
-  ];
-  
-  export const projects = [  
-
-    {
-      id: 1,
-      title: "Task Manager",
-      date: "Jan 2024",
-      description:
-        "Task Manager, a dynamic web application crafted with React, Redux, and Redux Toolkit, offers users a seamless task management experience. Featuring a secure login system through Google authentication, users can effortlessly create, update, delete, and mark tasks as complete.",
-      image: taskManager,
-      tags: ["React Js", "React-Redux", "Redux-Toolkit", "Firebase", "Node JS", "MongoDB"],
-      category: "web app",
-      github: "https://github.com/ahmedullah12/task-manager-redux",
-      webapp: "https://task-manager-ahmed.netlify.app/",
-    },
-    {
-      id: 2,
-      title: "GadgetTradeHub",
-      date: "Jan 2024",
-      description:
-        "",
-      image: gadgetTradeHub,
-      tags: ["React Js", "Firebase", "React-Tabs", "Node JS", "MongoDB", "JWT"],
-      category: "web app",
-      github: "https://github.com/ahmedullah12/gadget-trade-hub-client",
-      webapp: "https://gadget-trade-hub-ahmed.netlify.app/",
-    },
-    
-    {
-      id: 3,
-      title: "Ahmed's Photography",
-      date: "Dec 2023",
-      description:
-        "Ahmed's Photography, a captivating React web app with integrated Node.js server, brings the art of photography to life. Seamlessly blending Firebase authentication and Stripe.js payment processing, users can effortlessly explore and book photography services.",
-      image: ahmedsphotography,
-      tags: ["React Js", "API", "Firebase", "Node JS", "MongoDB"],
-      category: "web app",
-      github: "https://github.com/ahmedullah12/ahmeds-photography",
-      webapp: "https://ahmeds-photography.netlify.app/",
     },
     
   ];
