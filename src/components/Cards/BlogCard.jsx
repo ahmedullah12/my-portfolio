@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { format } from "date-fns";
 import { ArrowForward } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import parse from "html-react-parser";
+import parse from "html-react-parser"
 
 const Button = styled.button`
   width: 100%;
@@ -67,16 +66,6 @@ const Title = styled.div`
   text-overflow: ellipsis;
 `;
 
-const Date = styled.div`
-  font-size: 12px;
-  margin-left: 2px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_secondary + 80};
-  @media only screen and (max-width: 768px) {
-    font-size: 10px;
-  }
-`;
-
 const Description = styled.div`
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary + 99};
@@ -89,37 +78,17 @@ const Description = styled.div`
   text-overflow: ellipsis;
 `;
 
-const Members = styled.div`
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-`;
-const Avatar = styled.img`
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-left: -10px;
-  background-color: ${({ theme }) => theme.white};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 3px solid ${({ theme }) => theme.card};
-`;
-
-const ProjectCards = ({ project }) => {
+const BlogCard = ({ blog }) => {
   return (
     <Card>
-      <Image src={project.image} />
+      <Image src={blog.blogImage} />
 
       <Details>
-        <Title>{project.title}</Title>
-        <Date>{format(project.date, "PPP")}</Date>
-        <Description>{parse(project.description)}</Description>
+        <Title>{blog.title}</Title>
+        <Description>{parse(blog.text)}</Description>
       </Details>
-      <Members>
-        {project.member?.map((member, i) => (
-          <Avatar key={i} src={member.img} />
-        ))}
-      </Members>
-      <Link style={{ textDecoration: "none" }} to={`/project/${project._id}`}>
+      
+      <Link style={{ textDecoration: "none" }} to={`/blog/${blog._id}`}>
         <Button>
           See Details <ArrowForward />
         </Button>
@@ -128,8 +97,8 @@ const ProjectCards = ({ project }) => {
   );
 };
 
-ProjectCards.propTypes = {
-  project: PropTypes.object.isRequired,
+BlogCard.propTypes = {
+  blog: PropTypes.object.isRequired,
 };
 
-export default ProjectCards;
+export default BlogCard;

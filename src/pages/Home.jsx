@@ -4,6 +4,7 @@ import Contact from "../components/Contact/Contact";
 import Education from "../components/Education/Education";
 import Projects from "../components/Projects/Projects";
 import Skills from "../components/Skills/Skills";
+import Blogs from "../components/Blogs/Blog";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -20,6 +21,7 @@ const Home = () => {
       <Skills></Skills>
       <Projects></Projects>
       <Education></Education>
+      <Blogs></Blogs>
       <Contact></Contact>
     </Body>
   );
