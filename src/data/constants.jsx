@@ -63,7 +63,7 @@ export const Bio = {
       title: "GadgetTradeHub",
       date: "Jan 2024",
       description:
-        "This React JS website seamlessly connects buyers and sellers, providing a user-friendly platform for commerce enthusiasts.A secure platform with Firebase authentication ensures a reliable and trustworthy environment. Users can create accounts effortlessly using email, password, or Google authentication.",
+        "",
       image: gadgetTradeHub,
       tags: ["React Js", "Firebase", "React-Tabs", "Node JS", "MongoDB", "JWT"],
       category: "web app",
